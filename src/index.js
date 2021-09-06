@@ -5,6 +5,10 @@ const morgan = require('morgan');
 //setting 
 app.set('port', process.env.Port || 3001);
 
+var cors = require('cors')
+
+app.use(cors())
+
 //routes 
 app.use(require('./routes/index'));
 //app.use('/api/deals', require('./routes/deals'));
